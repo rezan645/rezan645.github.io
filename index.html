@@ -18,7 +18,8 @@
     if (passwordEntered === null || passwordEntered.trim() === "") {
         document.body.innerHTML = "<h1>Доступ заборонено!</h1>";
         setTimeout(function() {
-            window.location.href = "https://google.com"; // Переадресація через 1 секунду
+            location.reload(); // Перезавантаження сторінки
+            window.location.href = "https://google.com"; // Переадресація
         }, 1000); // 1 секунда затримки
         return; // Зупиняємо подальше виконання коду
     }
@@ -30,11 +31,13 @@
     if (hashedInput !== hashedPassword) {
         document.body.innerHTML = "<h1>Неправильний пароль!</h1>";
         setTimeout(function() {
-            window.location.href = "https://google.com"; // Переадресація через 1 секунду
+            location.reload(); // Перезавантаження сторінки
+            window.location.href = "https://google.com"; // Переадресація
         }, 1000); // 1 секунда затримки
         return; // Зупиняємо подальше виконання коду
     }
 </script>
+
 
 
 
