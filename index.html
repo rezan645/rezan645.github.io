@@ -7,15 +7,23 @@
     <title>Spherefy</title>
     <link rel="stylesheet" href="Spherefy.css">
     <title>Доступ обмежено</title>
-    <script type="text/javascript">
-        var password = "yourpassword"; // Встановіть ваш пароль тут
-        var passwordEntered = prompt("rezan645lol11:");
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script type="text/javascript">
+    // Збережи хешований пароль
+    var hashedPassword = "e99a18c428cb38d5f260853678922e03"; // Хеш MD5 для "yourpassword"
+    
+    // Запитай у користувача пароль
+    var passwordEntered = prompt("rezan64511:");
+    
+    // Хешуй введений пароль
+    var hashedInput = CryptoJS.MD5(passwordEntered).toString();
 
-        if (passwordEntered !== password) {
-            document.body.innerHTML = "<h1>Неправильний пароль!</h1>";
-            window.location.href = "https://google.com"; // Вивести на іншу сторінку, якщо пароль неправильний
-        }
-    </script>
+    // Перевіряй хеш, а не відкритий пароль
+    if (hashedInput !== hashedPassword) {
+        document.body.innerHTML = "<h1>Неправильний пароль!</h1>";
+        window.location.href = "https://google.com";
+    }
+</script>
 </head>
 <body>
     <!-- Header -->
