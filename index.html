@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spherefy</title>
     <link rel="stylesheet" href="Spherefy.css">
-    <title>Доступ обмежено</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 <script type="text/javascript">
     // Хешований пароль для "yourpassword"
     var hashedPassword = "e99a18c428cb38d5f260853678922e03"; 
@@ -18,16 +17,18 @@
     // Якщо користувач натиснув "Скасувати" або нічого не ввів
     if (passwordEntered === null || passwordEntered.trim() === "") {
         document.body.innerHTML = "<h1>Доступ заборонено!</h1>";
-        window.location.href = "https://google.com";
-    } else {
-        // Хешуємо введений пароль
-        var hashedInput = CryptoJS.MD5(passwordEntered).toString();
+        window.location.href = "https://google.com"; // Переадресація
+        return; // Зупиняємо подальше виконання коду
+    }
 
-        // Перевіряємо, чи хеші збігаються
-        if (hashedInput !== hashedPassword) {
-            document.body.innerHTML = "<h1>Неправильний пароль!</h1>";
-            window.location.href = "https://google.com";
-        }
+    // Хешуємо введений пароль
+    var hashedInput = CryptoJS.MD5(passwordEntered).toString();
+
+    // Перевіряємо, чи хеші збігаються
+    if (hashedInput !== hashedPassword) {
+        document.body.innerHTML = "<h1>Неправильний пароль!</h1>";
+        window.location.href = "https://google.com"; // Переадресація
+        return; // Зупиняємо подальше виконання коду
     }
 </script>
 
