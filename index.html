@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spherefy</title>
     <link rel="stylesheet" href="Spherefy.css">
+    <title>Доступ обмежено</title>
+    <script type="text/javascript">
+        var password = "yourpassword"; // Встановіть ваш пароль тут
+        var passwordEntered = prompt("rezan645lol11:");
+
+        if (passwordEntered !== password) {
+            document.body.innerHTML = "<h1>Неправильний пароль!</h1>";
+            window.location.href = "https://google.com"; // Вивести на іншу сторінку, якщо пароль неправильний
+        }
+    </script>
 </head>
 <body>
     <!-- Header -->
