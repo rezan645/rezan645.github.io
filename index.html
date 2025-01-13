@@ -17,7 +17,9 @@
     // Якщо користувач натиснув "Скасувати" або нічого не ввів
     if (passwordEntered === null || passwordEntered.trim() === "") {
         document.body.innerHTML = "<h1>Доступ заборонено!</h1>";
-        window.location.href = "https://google.com"; // Переадресація
+        setTimeout(function() {
+            window.location.href = "https://google.com"; // Переадресація через 1 секунду
+        }, 1000); // 1 секунда затримки
         return; // Зупиняємо подальше виконання коду
     }
 
@@ -27,10 +29,13 @@
     // Перевіряємо, чи хеші збігаються
     if (hashedInput !== hashedPassword) {
         document.body.innerHTML = "<h1>Неправильний пароль!</h1>";
-        window.location.href = "https://google.com"; // Переадресація
+        setTimeout(function() {
+            window.location.href = "https://google.com"; // Переадресація через 1 секунду
+        }, 1000); // 1 секунда затримки
         return; // Зупиняємо подальше виконання коду
     }
 </script>
+
 
 
 </head>
