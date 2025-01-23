@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; script-src 'self' https://trusted-scripts.com;">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Spherefy.">
+
     <title>Spherefy</title>
     <link rel="stylesheet" href="Spherefy.css">
 </head>
@@ -19,8 +24,8 @@
             </ul>
             <div class="auth-buttons">
                   <a href="Spherefy login.html" >
-                    <button class="login-btn"> Login/ Sign Up
-                  </button>
+                    <button class="login-btn">Login/Sign Up
+                    </button>
                  </a>
             </div>
         </nav>
@@ -32,10 +37,10 @@
         <section class="hero">
             <h1>Welcome to Spherefy</h1>
             <p>Manage your users with ease and efficiency.</p>
-            <a href="Spherefy login.html">
+            <a  href="Spherefy login.html">
             <button class="get-started-btn">Get Started</button>
         </a>
-        </section>
+       </section> 
 
         <!-- Features Section -->
         <section id="features" class="features">
@@ -54,18 +59,19 @@
                     <p>Track user activity and system performance.</p>
                 </div>
             </div>
-        </section>
+       
 
         <!-- About Section -->
         <section id="about" class="about">
             <h2>About Spherefy</h2>
             <p>Spherefy is a user management tool designed to simplify administration tasks and enhance collaboration.</p>
         </section>
-
-        <!-- Contact Section -->
-       <section id="contact" class="contact">
+ </section>
+      
+     <!-- Contact Section 
+       <section style="text-align: center;" id="contact" class="contact">
             <h2>Contact Us</h2>
-            <form style="margin-right: 33%;" action="#" method="post">
+            <form style="margin: 0;" action="#" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -73,42 +79,28 @@
                 <input type="email" id="email" name="email" required>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                <input type="text" id="message" name="message" required></textarea>
 
                 <button type="submit">Send</button>
             </form>
-        </section>
+        </section>-->
     </main>
-
-    <!-- Footer -->
-   
-   <!-- Mobile Navigation -->
-    <!-- <div id="fuck" class="mobile-nav">
-      
-        <div class="list">
-            <a href="#">
-                <div class="icon">🏠</div>
-                <span>Home</span>
-            </a>
-        </div>
-        <div class="list">
-            <a href="#features">
-                <div class="icon">⚙️</div>
-                <span>Features</span>
-            </a>
-        </div>
-        <div class="list">
-            <a href="#about">
-                <div class="icon">ℹ️</div>
-                <span>About</span>
-            </a>
-        </div>     
-           </div>    -->        
- <footer  >
-    <p>&copy; 2024 Spherefy. All rights reserved.</p>
-        <a href="Spherefy contact us.html"> 
-           <span> Contact Us </span>
-        </a>   
+       
+ <footer  > 
+    <section style=" text-align: center;
+                 border-radius: 10px;" id="fuck" class="fuck">
+                <p>&copy; 2024 Spherefy. All rights reserved.</p>
+                <a href="Spherefy contact us.html">  
+                <span> Contact Us </span>
+            </a> 
+         <div  id="social" class="social">
+            <ul class="nav-links" style="display: flex; list-style: none; padding: 0; margin: 0; ">
+                    <li><a href="">instagram</a> </li>
+                    <li> <a href="">youtube</a> </li>
+                    <li> <a href="">twiter</a></li>           
+            </ul>
+        </div> 
+    </section>
     </footer>
 
     <script src="Spherefy.js"></script>
