@@ -1,39 +1,5 @@
-html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
-}
 
-ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hgroup,p,blockquote,figure,form,fieldset,input,legend,pre,abbr,button {
-    margin: 0;
-    padding: 0
-}
 
-pre,code,address,caption,th,figcaption {
-    font-size: 1em;
-    font-weight: normal;
-    font-style: normal
-}
-
-fieldset,iframe {
-    border: 0
-}
-
-caption,th {
-    text-align: left
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0
-}
-
-main,summary,details {
-    display: block
-}
-
-audio,canvas,video,progress {
-    vertical-align: baseline
-}
 /* Загальні стилі */
 body {
     margin: 0;
@@ -68,6 +34,7 @@ header {
     z-index: 1000;
     transition: background-color 0.3s, opacity 0.3s;
     opacity: 0.99;
+    
 }
 
 /* Зміна прозорості при прокручуванні */
@@ -78,8 +45,9 @@ header.scrolled {
 /* Навігація */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    
 }
 
 .nav-links {
@@ -87,7 +55,7 @@ header.scrolled {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .nav-links li a {
@@ -102,12 +70,12 @@ header.scrolled {
 
 .auth-buttons {
     display: flex;
-    margin-left: 10%;
+  
 }
 
 /* Кнопки входу та реєстрації */
 .auth-buttons button {
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: 3px solid #7b2cbf;
     border-radius: 5px;
     background-color: #7b2cbf;
@@ -200,7 +168,15 @@ main {
     background-color: #f9f9f9;
 }
 
-
+.foot{
+    color: #ebecf1;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+   
+}
 /* Мобільна адаптація */
 @media (max-width: 768px) {
     .nav-links {
@@ -209,7 +185,7 @@ main {
 
     .auth-buttons {
         display: flex;
-      align-items: center; 
+        gap: 10px;
     }
 
     .feature-list {
@@ -285,12 +261,11 @@ main {
     }
     /* Footer */
 footer { 
-  
     text-align: center;
     padding: 10px 20px;
     background-color: #4a4e69;
     color: #fff;
-  
+
     
 }
 
