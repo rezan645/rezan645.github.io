@@ -1,14 +1,121 @@
 
 
+
+.form{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+.form:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.form:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+.form:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+.form span{
+    position: absolute;
+    display: block;
+}
+.form span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.form span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.form span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+.form span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
 /* Загальні стилі */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f5f5f5;
-    padding: 0
+    padding: 0;
+    display:inline;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: bold;
 }
-
 /* Скидання стилів для посилань */
 a {
     text-decoration: none; /* Прибирає підкреслення */
@@ -27,7 +134,7 @@ header {
     background-color: #4a4e69;
     color: #fff;
     padding: 10px 20px;
-    position: fixed;
+    position: static;
     width: 100%;
     top: 0;
     left: 0;
@@ -169,7 +276,7 @@ main {
 }
 
 .foot{
-    color: #ebecf1;
+    color: #e8d9e6;
     cursor: pointer;
     font-size: 1rem;
     position: relative;
@@ -177,6 +284,7 @@ main {
     transition: color 0.3s, background-color 0.3s, border-color 0.3s;
    
 }
+
 /* Мобільна адаптація */
 @media (max-width: 768px) {
     .nav-links {
@@ -184,8 +292,10 @@ main {
     }
 
     .auth-buttons {
-        display: flex;
+       
         gap: 10px;
+        text-align: center;
+        border: #752485;
     }
 
     .feature-list {
@@ -202,6 +312,7 @@ main {
         flex-direction: column;
         align-items: center;
     }
+    
     /* Стилі для мобільного меню */
     .mobile-nav {
        
@@ -217,7 +328,7 @@ main {
         padding: 10px 0;
         z-index: 1000;
         box-sizing: border-box;
-        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 1 -2px 5px rgba(0, 0, 0, 0.2);
     }
     footer { 
   
