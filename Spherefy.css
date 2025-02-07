@@ -134,7 +134,7 @@ header {
     background-color: #4a4e69;
     color: #fff;
     padding: 10px 20px;
-    position: static;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
