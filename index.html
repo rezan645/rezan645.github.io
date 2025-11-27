@@ -1,127 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; script-src 'self' https://trusted-scripts.com;">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Spherefy.">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Spherefy" />
 
-    <title>Spherefy</title>
-    <link rel="stylesheet" href="Spherefy.css">
+  <title>Spherefy</title>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous"/>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="Spherefy.css" />
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="navbar">
-            <div   class="logo">Spherefy</div>
-         <div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-            </ul> 
-        </div>
-            <div class="auth-buttons">
-                  <a href="Spherefy login.html" >
-                    <button class="login-btn">Login/Sign Up
-                    </button>
-                 </a>
-            </div>  
-            <a class="foot" href="Spherefy contact us.html">  
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-              Contact Us</a> 
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Spherefy</div>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Welcome to Spherefy</h1>
-            <p>Manage your users with ease and efficiency.</p>
-            <a  href="Spherefy login.html">
-            <button class="get-started-btn">Get Started</button>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme"><i class="fa-regular fa-moon"></i></button>
+
+        <a href="Spherefy login.html" class="auth-link">
+          <button class="login-btn">Login / Sign Up</button>
         </a>
-       </section> 
 
-        <!-- Features Section -->
-        <section id="features" class="features">
-            <h2>Features</h2>
-            <div class="feature-list">
-                <div class="feature-item">
-                    <h3>User Management</h3>
-                    <p>Easily add, edit, and remove users.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Role-Based Access</h3>
-                    <p>Assign roles and manage permissions seamlessly.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Analytics Dashboard</h3>
-                    <p>Track user activity and system performance.</p>
-                </div>
-            </div>
-       
+        <button id="mobile-menu-toggle" class="icon-btn mobile-only" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <h2>About Spherefy</h2>
-            <p>Spherefy is a user management tool designed to simplify administration tasks and enhance collaboration.</p>
-        </section>
- </section>
-      
-      <!--Contact Section -->
-     <!--  <section style="text-align: center;" id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <form style="margin: 0;" action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+  <!-- Mobile Navigation (sliding) -->
+  <div id="mobile-nav" class="mobile-nav hidden">
+    <button id="mobile-close" class="icon-btn" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <a href="#" class="mobile-link"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="#features" class="mobile-link"><i class="fa-solid fa-list-check"></i> Features</a>
+    <a href="#about" class="mobile-link"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="Spherefy login.html" class="mobile-link"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+  </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+  <!-- Main content -->
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Welcome to Spherefy</h1>
+        <p>Manage your users with ease and efficiency.</p>
+        <a href="Spherefy login.html" class="get-started-btn">Get Started</a>
+      </div>
+    </section>
 
-                <label for="message">Message:</label>
-                <input type="text" id="message" name="message" required></textarea>
+    <!-- Features -->
+    <section id="features" class="section">
+      <h2>Features</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <h3><i class="fa-solid fa-users"></i> User Management</h3>
+          <p>Easily add, edit, and remove users.</p>
+        </div>
 
-                <button type="submit">Send</button>
-            </form>
-        </section>-->
-    </main>
-       
- <footer> 
-                <p>&copy; 2025 Spherefy. All rights reserved.</p>
-                <div >
-                    <a class="form" href="#">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      inatagram
-                    </a>
-                    <a class="form" href="#">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                       youtube
-                    </a>
-                    <a class="form" href="#">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                     twiter
-                    </a>
-                    </div>
-    </footer>
+        <div class="feature-item">
+          <h3><i class="fa-solid fa-user-shield"></i> Role-Based Access</h3>
+          <p>Assign roles and manage permissions seamlessly.</p>
+        </div>
 
-    <script src="Spherefy.js"></script>
+        <div class="feature-item">
+          <h3><i class="fa-solid fa-chart-line"></i> Analytics Dashboard</h3>
+          <p>Track user activity and system performance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About Spherefy</h2>
+      <p>Spherefy is a user management platform designed to simplify administration tasks and enhance collaboration across your team.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <p>&copy; 2024 Spherefy. All rights reserved.</p>
+    </div>
+
+    <div class="footer-links">
+      <a class="social" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+      <a class="social" href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a>
+      <a class="social" href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i><span>Twitter</span></a>
+      <a class="social" href="Spherefy contact us.html" aria-label="Contact"><i class="fa-solid fa-envelope"></i><span>Contact Us</span></a>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="Spherefy.js"></script>
 </body>
 </html>
-
