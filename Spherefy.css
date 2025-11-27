@@ -175,4 +175,3 @@ a:focus, button:focus{ outline:2px dashed var(--accent); outline-offset:3px; }
 
 /* Small utility */
 .hidden{ display:none !important; }
-
